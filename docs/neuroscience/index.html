@@ -61,7 +61,30 @@
     </header>
     <main class="container">
         <br>
-
+        <div class="card">
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="tab1-tab" data-bs-toggle="tab" href="#tab1" role="tab"
+                            aria-controls="tab1" aria-selected="true">外部リンク</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="tab2-tab" data-bs-toggle="tab" href="#tab2" role="tab"
+                            aria-controls="tab2" aria-selected="false">製作物</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-body">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                        <h3 class="card-title"><i class="bi bi-link-45deg"></i>&nbsp;外部リンク集</h3>
+                    </div>
+                    <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                        <h3 class="card-title"><i class="bi bi-boxes"></i>&nbsp;製作物</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="text-center">
