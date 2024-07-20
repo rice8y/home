@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/default.min.css">
+    <link rel="stylesheet" href="../../highlight/styles/github-dark.min.css">
 </head>
 
 <body>
@@ -27,22 +27,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                            <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../julia/index.html">Julia 関連</a>
+                            <a class="nav-link" href="../../julia/index.html">Julia 関連</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">TeX 関連</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../music/index.html">音楽</a>
+                            <a class="nav-link" href="../../music/index.html">音楽</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../neuroscience/index.html">計算論的神経科学</a>
+                            <a class="nav-link" href="../../neuroscience/index.html">計算論的神経科学</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../others/index.html">その他</a>
+                            <a class="nav-link" href="../../others/index.html">その他</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -74,13 +74,13 @@
                 </p>
                 <hr>
                 <div class="text-left">
-                    <pre><code class="language-latex">
+<pre><code class="latex">
 \documentclass{standalone}
 \usepackage{scsnowman}
 \begin{document}
 \scsnowman[hat=true,muffler=red,arms=true,scale=10]
 \end{document}
-                    </code></pre>
+</code></pre>
                 </div>
             </div>
             <div class="col-lg-4">
@@ -135,14 +135,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelectorAll('pre code').forEach((block) => {
-                hljs.highlightBlock(block);
-            });
-        });
-    </script>
+    <script src="../../highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 
 </html>
