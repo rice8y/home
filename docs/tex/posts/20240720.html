@@ -87,11 +87,13 @@
                 <p>
                     さて, ここまでの説明で分かるように, 使用するフォントによって雪だるまが異なってしまうという<span style="color: red;">大問題</span>が発生する. これは,
                     LaTeXにおいても同様であり, この問題に対して様々な議論がなされた<sup><a href="#f1">1</a></sup>.
-                    そこで作られたのが, <a href="https://github.com/aminophen/scsnowman">scsnowman</a> パッケージである. パッケージの使い方は, 作者である<a href="https://acetaminophen.hatenablog.com/entry/2015/12/13/080226">aminophen さんの記事</a>を参照されたい.
+                    そこで作られたのが, <a href="https://github.com/aminophen/scsnowman">scsnowman</a> パッケージである. パッケージの使い方は,
+                    作者である<a href="https://acetaminophen.hatenablog.com/entry/2015/12/13/080226">aminophen
+                        さんの記事</a>を参照されたい.
                 </p>
                 <p>
-                    <h4>Hello, ☃!</h4>
-                    まず, Hello, Word! ならぬ Hello, ☃! をする. 
+                <h4>Hello, ☃!</h4>
+                まず, Hello, World! ならぬ Hello, ☃! をする. scsnowman パッケージで雪だるまを表示するには, 以下のように記述する.
                 </p>
                 <pre><code class="latex">\documentclass{standalone}
 \usepackage{scsnowman}
@@ -99,6 +101,10 @@
 Hello, \scsnowman[hat=true,muffler=red,arms=true]!
 \end{document}
 </code></pre>
+                <p>
+                    上記により, 以下のような出力を得る.
+                    <img src="../../images/hello.png" />
+                </p>
                 <hr>
                 <div class="footnotes">
                     <div id="f1" class="footnote">
