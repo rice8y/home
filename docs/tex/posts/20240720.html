@@ -106,11 +106,56 @@ Hello, \scsnowman[hat=true,muffler=red,arms=true]!
                     上記により, 以下のような出力を得る. <br>
                     <img class="img-fluid" src="../../images/hello.png" /><br>
                     無事に Hello 出来た☃.
+                    <h3><i class="bi bi-paragraph"></i> どうせなら Lua で日付表示</h3>
+                    先ほどの雪だるまだけでは味気ない<sup><a href="#f2">2</a></sup>ので日付も表示してみる. 以下のように記述する.
                 </p>
+                <pre><code class="latex">\documentclass{ltjsarticle}
+\usepackage{luacode}
+\usepackage{scsnowman}
+\usepackage{float}
+\usepackage{tikz}
+\begin{luacode*}
+function today(mode)
+  if mode == "date" then
+    tex.sprint("Today is " .. os.date(("%Y-%m-%d")) .. ".")
+  elseif mode == "time" then
+    tex.sprint("The current time is " .. os.date(("%H:%M:%S")) .. ".")
+  end
+end
+\end{luacode*}
+\newcommand{\myToday}[1]{\directlua{today("#1")}}
+\newcommand{\popup}[1]{%
+\newlength{\len}%
+\settowidth{\len}{#1}%
+\pgfmathsetmacro{\buff}{\len / 72.27 * 2.54}%
+\setlength{\len}{\buff cm}%
+\pgfmathsetmacro{\scale}{\len / 3.02cm}%
+\begin{tikzpicture}
+    \fill[black] (0,0) ellipse [x radius=\scale*2.01cm, y radius=\scale*1.01cm];
+    \fill[black] (-\scale*0.51,-\scale*0.91) -- (0,-\scale*2.02) -- (\scale*0.51,-\scale*0.91) -- cycle;
+    \fill[white] (0,0) ellipse [x radius=\scale*2cm, y radius=\scale*1cm];
+    \fill[white] (-\scale*0.5,-\scale*0.9) -- (0,-\scale*2) -- (\scale*0.5,-\scale*0.9) -- cycle;
+    \node[align=center] at (0,0) {#1};
+\end{tikzpicture}%
+}
+        
+\begin{document}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c}
+    \popup{\myToday{date}}\\
+    \scsnowman[hat,muffler=red,arms,scale=10]
+\end{tabular}
+\end{table}
+\end{document}                    
+</code></pre>
                 <hr>
                 <div class="footnotes">
                     <div id="f1" class="footnote">
                         <p><strong>1.</strong> 諸説あり.</p>
+                    </div>
+                    <div id="f2" class="footnote">
+                        <p><strong>2.</strong> でも素敵.</p>
                     </div>
                 </div>
                 <a class="link-offset-2 link-underline link-underline-opacity-0" href="javascript:history.back()"><i
