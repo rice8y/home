@@ -80,6 +80,19 @@
                     そこで作られたのが <a href="https://github.com/zr-tex8r/SC-tools/blob/master/scsnowman-lib/scsnowman-zrchristmas.def">zrchristmas</a> パッケージである. 
                     使い方は作者である <a href="https://zrbabbler.hatenablog.com/entry/2021/12/28/235528">ZR さんの記事</a>を参照されたい. 
                 </p>
+                <p>雪だるまにサンタ帽をかぶせるには以下のように記述する.</p>
+                <pre><code class="latex">\documentclass{standalone}
+\usepackage{scsnowman}
+\usescsnowmanlibrary{zrchristmas}
+\begin{document}
+\scsnowman[muffler=red,arms,buttons,note,shape=zrchristmas,hat=red]
+\end{document}
+</code></pre>
+                <p>
+                    上記により, 以下のような出力を得る. <br>
+                    <img class="img-fluid" src="../../images/santa.png" /><br>
+                    無事にサンタ帽をかぶせることが出来た!
+                </p>
                 <hr>
                 <div class="footnotes">
                     <p id="f1" class="footnote">
