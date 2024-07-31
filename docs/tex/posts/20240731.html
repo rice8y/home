@@ -9,6 +9,38 @@
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="../../highlight/styles/github-dark.min.css">
+    <style>
+        .footnotes {
+            counter-reset: footnote; /* カウンターをリセット */
+        }
+        
+        .footnote {
+            display: flex; /* フレックスボックスを使用 */
+            align-items: flex-start; /* 上揃え */
+            margin-bottom: 1em;
+        }
+        
+        .footnote strong {
+            flex: 0 0 auto; /* 固定幅 */
+            margin-right: 0.5em; /* 番号と文章の間にスペース */
+        }
+        
+        .footnote p {
+            margin: 0;
+        }
+        
+        .footnote::before {
+            content: counter(footnote) ". "; /* 番号を自動的に追加 */
+            counter-increment: footnote; /* カウンターをインクリメント */
+            flex: 0 0 auto; /* 固定幅 */
+            margin-right: 0.5em; /* 番号と文章の間にスペース */
+        }
+        
+        .footnote-content {
+            flex: 1 1 auto; /* 可変幅 */
+        }
+        
+    </style>
 </head>
 
 <body>
