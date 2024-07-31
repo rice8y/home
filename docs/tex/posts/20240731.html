@@ -81,7 +81,7 @@
                 <h3><i class="bi bi-paragraph"></i>TeXshade</h3>
                 <p>
                     LaTeX でシーケンスアラインメントを組版するためのパッケージとして, <a href="https://github.com/evolvedmicrobe/texshade?tab=readme-ov-file">TeXshade</a> が存在する. 
-                    使用例を以下に示す. 
+                    使用例を以下に示す<sup><a href="#f1">1</a></sup>. 
                 </p>
                 <pre><code class="latex">\documentclass{ltjsarticle}
 \usepackage{texshade}
@@ -92,13 +92,16 @@
 \end{document}
 </code></pre>
                 <p>
-                    上記により, 以下のような出力を得る<sup><a href="#f1">1</a></sup>. <br>
+                    上記により, 以下のような出力を得る<sup><a href="#f1">2</a></sup>. <br>
                     <img class="img-fluid" src="../../images/aqp.png" />
                 </p>
                 <hr>
                 <div class="footnotes">
                     <p id="f1" class="footnote">
-                        <strong>1.</strong> 執筆中 (2024/07/31)
+                        <strong>1.</strong> DVI ドライバを経由する LaTeX エンジンを使用している場合は, TeXshade パッケージを読み込む際に, オプションで DVI ドライバを指定する必要がある.
+                    </p>
+                    <p id="f2" class="footnote">
+                        <strong>2.</strong> 執筆中 (2024/07/31)
                     </p>
                 </div>
                 <a class="link-offset-2 link-underline link-underline-opacity-0" href="javascript:history.back()"><i
