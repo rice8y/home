@@ -108,8 +108,25 @@
 \end{document}
 </code></pre>
                 <p>
+                    上記により, 以下のような出力を得る. <br>
+                    <img class="img-fluid" src="../../images/aqp01.png" />
+                </p>
+                <p>また, オプション指定により一致率を考慮したシェーディングが可能となる. 具体的には, 以下のように記述する. </p>
+                <pre><code class="latex">\documentclass{ltjsarticle}
+\usepackage{texshade}
+\thispagestyle{empty}
+\begin{document}
+\begin{texshade}{sample.fasta}
+  \threshold[80]{50}
+  \showconsensus[ColdHot]{bottom}
+  \defconsensus{.}{lower}{upper}
+  \showlegend
+\end{texshade}
+\end{document}
+</code></pre>
+                <p>
                     上記により, 以下のような出力を得る<sup><a href="#f1">2</a></sup>. <br>
-                    <img class="img-fluid" src="../../images/aqp.png" />
+                    <img class="img-fluid" src="../../images/aqp02.png" />
                 </p>
                 <hr>
                 <div class="footnotes">
