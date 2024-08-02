@@ -164,10 +164,12 @@
                 <p>
                     <code>kpsewhich texmf.cnf</code> で <code>texmf.cnf</code> の場所を探し, <code>texmf.cnf</code> に <pre><code>stack_size = 50000</code></pre> を記述. 
                     その後, <code>fmtutil-sys --all</code> を実行し, ファイルを更新. しかし, 今度は
+                </p>
                 <pre><code>TeX capacity exceeded, sorry [input stack size=50000].
 &lt;to be read again&gt;
 \res11
-</code></pre> が表示され上手くいかず... <br>
+</code></pre>   
+                <p>が表示され上手くいかず... <br>
                     <code>stack_size</code> を50000より大きくしたり, <code>main_memory</code> を変更したりしたがエラーは解消されなかった. 謎🙃
                 </p>
                 <hr>
