@@ -162,12 +162,16 @@
                     このエラーは, <a href="https://github.com/evolvedmicrobe/texshade/blob/master/texshade.pdf">公式ドキュメント</a>においても言及されており, 以下のように対応した.
                 </p>
                 <p>
-                    <pre><code>kpsewhich texmf.cnf</code></pre> で <pre><code>texmf.cnf</code></pre> の場所を探し, <pre><code>texmf.cnf</code></pre> に <pre><code>stack_size = 50000</code></pre> を記述. 
+                    <code>kpsewhich texmf.cnf</code> で <code>texmf.cnf</code> の場所を探し, <code>texmf.cnf</code> に <pre><code>stack_size = 50000</code></pre> を記述. 
                     その後, <code>fmtutil-sys --all</code> を実行し, ファイルを更新.
                 </p>
                 <p>
-                    しかし, 今度は <pre><code>TeX capacity exceeded, sorry [input stack size=10000].</code></pre> が表示され上手くいかず... <br>
-                    何度か <pre><code>stack_size</code></pre> を変更したがエラーは解消されなかった. 謎🙃
+                    しかし, 今度は
+                <pre><code>TeX capacity exceeded, sorry [input stack size=10000].
+<to be read again>
+\res11
+</code></pre> が表示され上手くいかず... <br>
+                    何度か <code>stack_size</code> を変更したがエラーは解消されなかった. 謎🙃
                 </p>
                 <hr>
                 <div class="footnotes">
