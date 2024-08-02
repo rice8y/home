@@ -154,7 +154,7 @@
                 <p>
                     なお, 入力ファイルにおける文字数が多くなると以下のエラーが発生し, 十分な量のファイルを扱うことが出来なかった.
                 </p>
-                <pre><code class="latex">TeX capacity exceeded, sorry [input stack size=10000].
+                <pre><code>TeX capacity exceeded, sorry [input stack size=10000].
 <to be read again> 
 \res11
 </code></pre>
@@ -163,7 +163,7 @@
                 </p>
                 <p>
                     <pre><code>kpsewhich texmf.cnf</code></pre> で <pre><code>texmf.cnf</code></pre> の場所を探し, <pre><code>texmf.cnf</code></pre> に <pre><code>stack_size = 50000</code></pre> を記述. 
-                    その後, <pre><code>fmtutil-sys --all</code></pre> を実行し, ファイルを更新.
+                    その後, <code>fmtutil-sys --all</code> を実行し, ファイルを更新.
                 </p>
                 <p>
                     しかし, 今度は <pre><code>TeX capacity exceeded, sorry [input stack size=10000].</code></pre> が表示され上手くいかず... <br>
