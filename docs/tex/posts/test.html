@@ -83,9 +83,14 @@
         <div class="row">
             <div class="col-lg-8">
                 {% capture markdown_content %}
-                {% include TeX/test.md %}
+                ## この記事のタイトル
+                
+                この記事の本文はMarkdownで書かれています。
+                
+                - リストアイテム1
+                - リストアイテム2
                 {% endcapture %}
-                {{ markdown_content }}
+                {{ markdown_content | markdownify }}
 
                 <hr>
                 <a class="link-offset-2 link-underline link-underline-opacity-0" href="javascript:history.back()"><i
